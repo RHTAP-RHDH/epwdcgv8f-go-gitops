@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: epwdcgv8f-go-gitops
+  description: This is GitOps manifest for epwdcgv8f-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: epwdcgv8f-go
+    janus-idp.io/tekton: epwdcgv8f-go 
+    backstage.io/kubernetes-id: epwdcgv8f-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:epwdcgv8f-go
